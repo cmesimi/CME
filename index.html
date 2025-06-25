@@ -3,191 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce BA Portfolio - [Your Name]</title>
+    <title>Simi Emmanuel's Portfolio - Senior Business Analyst</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Garamond font for all text, with serif fallback */
+        @import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400;500;600;700;800&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5; /* Light grey background */
-            color: #333;
+            font-family: 'Garamond', serif; /* Changed to Garamond */
+            background-color: #e2e8f0; /* Soft blue-gray background */
+            color: #2d3748; /* Darker text for readability */
         }
-        .section-heading {
-            border-bottom: 2px solid #6366f1; /* Indigo border */
-            padding-bottom: 0.5rem;
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .skill-card {
-            background-color: white;
-            transition: transform 0.2s ease-in-out;
+        ::-webkit-scrollbar-track {
+            background: #cbd5e0;
+            border-radius: 10px;
         }
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        ::-webkit-scrollbar-thumb {
+            background: #a0aec0;
+            border-radius: 10px;
         }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; animation-delay: 0.2s; }
+        .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; animation-delay: 0.4s; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header/Hero Section -->
-    <header class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 px-4 sm:px-6 lg:px-8 shadow-lg">
-        <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 rounded-lg">
-                Hi, I'm a Senior Salesforce Business Analyst
-            </h1>
-            <p class="text-xl sm:text-2xl lg:text-3xl font-light opacity-90 rounded-lg">
-                Driving Efficiency & Innovation on the Salesforce Platform
+    <!-- Header Section -->
+    <header class="relative bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-8 md:p-10 rounded-b-3xl shadow-2xl overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <!-- Profile Picture -->
+            <img src="https://i.postimg.cc/x149Bd7h/social-media-image.jpg" alt="Simi Emmanuel Profile Picture"
+                 class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-lg mx-auto mb-6 transform transition-transform duration-500 hover:scale-105 animate-fade-in delay-100">
+
+            <!-- Name with Garamond font and border -->
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-3 leading-tight animate-fade-in-down
+                       border-2 border-white inline-block px-4 py-2 rounded-lg">Simi Emmanuel</h1>
+            <p class="text-xl md:text-3xl font-light opacity-95 animate-fade-in-up">Senior Business Analyst, Post Sales Catalyst</p>
+            <p class="text-base md:text-lg mt-4 opacity-85 max-w-2xl mx-auto animate-fade-in">
+                Transforming complex challenges into scalable, impactful solutions for operational excellence.
             </p>
-            <div class="mt-8">
-                <a href="#projects" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                    View My Projects
-                </a>
-            </div>
+        </div>
+        <!-- Abstract background shapes -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <circle cx="20" cy="20" r="15" fill="url(#grad1)" class="animate-pulse-slow"></circle>
+                <circle cx="80" cy="80" r="10" fill="url(#grad2)" class="animate-pulse-slow delay-100"></circle>
+                <rect x="50" y="10" width="10" height="20" rx="5" ry="5" fill="url(#grad3)" class="animate-pulse-slow delay-200"></rect>
+                <path d="M10 90 Q 30 70, 50 90 T 90 90" stroke="url(#grad4)" stroke-width="2" fill="none" class="animate-pulse-slow delay-300"></path>
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#a78bfa"/>
+                        <stop offset="100%" stop-color="#e9d5ff"/>
+                    </linearGradient>
+                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fbcfe8"/>
+                        <stop offset="100%" stop-color="#a78bfa"/>
+                    </linearGradient>
+                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#93c5fd"/>
+                        <stop offset="100%" stop-color="#a78bfa"/>
+                    </linearGradient>
+                     <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fbcfe8"/>
+                        <stop offset="100%" stop-color="#93c5fd"/>
+                    </linearGradient>
+                </defs>
+            </svg>
         </div>
     </header>
 
     <!-- Main Content Area -->
-    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <main class="max-w-5xl mx-auto p-4 md:p-8 mt-8">
 
-        <!-- About Section -->
-        <section id="about" class="mb-16 bg-white p-8 rounded-xl shadow-lg">
-            <h2 class="text-3xl font-bold mb-6 text-indigo-700 section-heading rounded-lg">About Me</h2>
-            <p class="text-lg leading-relaxed text-gray-700">
-                As a seasoned Senior Salesforce Business Analyst, I specialize in bridging the gap between business objectives and technical solutions on the Salesforce platform. My expertise lies in understanding complex business processes, eliciting precise requirements, and designing scalable, user-centric solutions that drive efficiency and deliver tangible ROI. I am passionate about leveraging Salesforce capabilities to optimize operations, enhance user experience, and empower organizations to achieve their strategic goals.
-            </p>
-            <p class="mt-4 text-lg leading-relaxed text-gray-700">
-                With a strong foundation in agile methodologies and a keen eye for detail, I excel at facilitating stakeholder communication, mapping intricate processes, and ensuring successful project delivery from concept to deployment. I thrive in dynamic environments, consistently seeking opportunities to innovate and refine workflows.
-            </p>
+        <!-- About Me Section -->
+        <section class="bg-white p-7 rounded-2xl shadow-xl mb-10 border border-gray-100 transform transition-transform duration-300 hover:scale-[1.005]">
+            <h2 class="text-3xl font-bold text-indigo-700 mb-5 border-b-2 border-indigo-200 pb-2">About Simi Emmanuel</h2>
+            <div class="text-gray-700 leading-relaxed text-lg">
+                <p class="mb-4">
+                    A detail-oriented Salesforce Administrator and Business Systems Analyst with 7+ years of experience designing and delivering scalable CRM solutions across various industries. Proven track record in optimizing end-to-end business processes, leading cross-functional initiatives, and driving user adoption through impactful Salesforce configurations and stakeholder engagement. Adept in Salesforce Service and Sales Cloud, process mapping, UAT facilitation, and data-driven solutioning. Passionate about transforming complex challenges into efficient and impactful solutions.
+                </p>
+            </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="mb-16 bg-white p-8 rounded-xl shadow-lg">
-            <h2 class="text-3xl font-bold mb-8 text-indigo-700 section-heading rounded-lg">My Core Skills</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Skill Card 1 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">1. Automation & Process Optimization</h3>
-                    <p class="text-gray-600 text-sm">Expert in identifying bottlenecks and implementing automated solutions to streamline workflows and improve operational efficiency.</p>
+        <!-- Tabs Section for Skills and Certifications -->
+        <section class="bg-white p-7 rounded-2xl shadow-xl mb-10 border border-gray-100 transform transition-transform duration-300 hover:scale-[1.005]">
+            <!-- Tab Navigation -->
+            <div class="flex flex-col sm:flex-row justify-center mb-6 border-b-2 border-indigo-200">
+                <button id="skills-tab" class="tab-button flex-1 text-center py-3 px-4 text-xl font-bold text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 transition-all duration-300 focus:outline-none rounded-t-lg active-tab">
+                    My Core Skills & Expertise
+                </button>
+                <button id="certifications-tab" class="tab-button flex-1 text-center py-3 px-4 text-xl font-bold text-gray-600 hover:text-indigo-700 hover:bg-indigo-50 transition-all duration-300 focus:outline-none rounded-t-lg">
+                    Certifications & Accolades
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="skills-content" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 text-gray-700 text-lg">
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Automation & Process Optimization:</strong> Streamlining operations for maximum efficiency.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Salesforce Platform Knowledge (Service Cloud):</strong> Architecting solutions on the world's leading CRM.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>User Story & Requirements Elicitation:</strong> Transforming concepts into clear, actionable specifications.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Process Mapping & Optimization (BPMN/Flowcharts):</strong> Visualizing and re-engineering business flows.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Stakeholder Communication & Facilitation:</strong> Building consensus and fostering cross-functional alignment.</span>
+                        </li>
+                    </ul>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Salesforce Data Modeling:</strong> Designing robust data structures for scalable solutions.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Agile/Scrum Delivery (Jira, Ceremonies, Backlog):</strong> Driving projects with iterative, value-focused methods.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Process Automation (Flows, Rules, Apex):</strong> Implementing intelligent automation within Salesforce.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Reporting & Dashboards:</strong> Crafting insightful analytics for strategic decision-making.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-3 text-purple-600 text-xl">&#x2022;</span>
+                            <span><strong>Testing & Quality Assurance (UAT, Deployment):</strong> Ensuring high-quality, defect-free solution delivery.</span>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Skill Card 2 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">2. Salesforce Platform Knowledge</h3>
-                    <p class="text-gray-600 text-sm">Deep understanding of Salesforce Sales Cloud, Service Cloud, Experience Cloud, and core platform functionalities.</p>
-                </div>
-                <!-- Skill Card 3 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">3. User Story & Requirements Elicitation</h3>
-                    <p class="text-gray-600 text-sm">Skilled in gathering, analyzing, and documenting clear, concise, and testable user stories and business requirements.</p>
-                </div>
-                <!-- Skill Card 4 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">4. Process Mapping & Optimization (BPMN/Flowcharts)</h3>
-                    <p class="text-gray-600 text-sm">Proficient in visually representing complex processes and identifying areas for optimization using standard notations.</p>
-                </div>
-                <!-- Skill Card 5 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">5. Stakeholder Communication & Facilitation</h3>
-                    <p class="text-gray-600 text-sm">Adept at fostering collaboration and facilitating productive discussions among diverse project stakeholders.</p>
-                </div>
-                <!-- Skill Card 6 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">6. Salesforce Data Modeling</h3>
-                    <p class="text-gray-600 text-sm">Ability to design efficient and scalable data models within Salesforce to support business requirements.</p>
-                </div>
-                <!-- Skill Card 7 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">7. Agile/Scrum Delivery (Jira, ceremonies, backlog grooming)</h3>
-                    <p class="text-gray-600 text-sm">Experienced in all phases of Agile project delivery, including sprint planning, daily stand-ups, and backlog management.</p>
-                </div>
-                <!-- Skill Card 8 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">8. Process Automation (Flows, Rules)</h3>
-                    <p class="text-gray-600 text-sm">Hands-on experience configuring Salesforce Flows, Workflow Rules, and Process Builders to automate business logic.</p>
-                </div>
-                <!-- Skill Card 9 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">9. Reporting & Dashboards</h3>
-                    <p class="text-gray-600 text-sm">Proficient in creating insightful Salesforce reports and dashboards to provide actionable business intelligence.</p>
-                </div>
-                <!-- Skill Card 10 -->
-                <div class="skill-card p-6 rounded-xl shadow-md border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-2 text-indigo-600 rounded-lg">10. Testing & Quality Assurance (UAT, Deployment)</h3>
-                    <p class="text-gray-600 text-sm">Capable of designing test cases, coordinating User Acceptance Testing (UAT), and managing successful deployments.</p>
+            </div>
+
+            <div id="certifications-content" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 text-lg">
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.013 1.168 5.766 3.04 7.822A12.001 12.001 0 0012 21.056c3.273 0 6.273-1.391 8.388-3.696A12.001 12.001 0 0021.072 12c0-3.013-1.168-5.766-3.04-7.822z"></path></svg>
+                        <span>Salesforce Administrator</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.013 1.168 5.766 3.04 7.822A12.001 12.001 0 0012 21.056c3.273 0 6.273-1.391 8.388-3.696A12.001 12.001 0 0021.072 12c0-3.013-1.168-5.766-3.04-7.822z"></path></svg>
+                        <span>Business Analyst</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.013 1.168 5.766 3.04 7.822A12.001 12.001 0 0012 21.056c3.273 0 6.273-1.391 8.388-3.696A12.001 12.001 0 0021.072 12c0-3.013-1.168-5.766-3.04-7.822z"></path></svg>
+                        <span>Sales Cloud</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.013 1.168 5.766 3.04 7.822A12.001 12.001 0 0012 21.056c3.273 0 6.273-1.391 8.388-3.696A12.001 12.001 0 0021.072 12c0-3.013-1.168-5.766-3.04-7.822z"></path></svg>
+                        <span>Service Cloud</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.013 1.168 5.766 3.04 7.822A12.001 12.001 0 0012 21.056c3.273 0 6.273-1.391 8.388-3.696A12.001 12.001 0 0021.072 12c0-3.013-1.168-5.766-3.04-7.822z"></path></svg>
+                        <span>Data Cloud</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.013 1.168 5.766 3.04 7.822A12.001 12.001 0 0012 21.056c3.273 0 6.273-1.391 8.388-3.696A12.001 12.001 0 0021.072 12c0-3.013-1.168-5.766-3.04-7.822z"></path></svg>
+                        <span>Salesforce AI Associate</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.013 1.168 5.766 3.04 7.822A12.001 12.001 0 0012 21.056c3.273 0 6.273-1.391 8.388-3.696A12.001 12.001 0 0021.072 12c0-3.013-1.168-5.766-3.04-7.822z"></path></svg>
+                        <span>Project Management Professional (PMP)</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002.928 12c0 3.013 1.168 5.766 3.04 7.822A12.001 12.001 0 0012 21.056c3.273 0 6.273-1.391 8.388-3.696A12.001 12.001 0 0021.072 12c0-3.013-1.168-5.766-3.04-7.822z"></path></path></svg>
+                        <span>Professional Scrum Master (PSM)</span>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg shadow-sm flex items-center space-x-3">
+                        <svg class="w-7 h-7 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.974 2.888a1 1 0 00-.364 1.118l1.519 4.674c.3.921-.755 1.688-1.538 1.118l-3.974-2.888a1 1 0 00-1.176 0l-3.974 2.888c-.783.57-1.838-.197-1.538-1.118l1.519-4.674a1 1 0 00-.364-1.118L2.923 10.09c-.783-.57-.381-1.81.588-1.81h4.915a1 1 0 00.95-.69l1.519-4.674z"></path></svg>
+                        <span>Trailhead: Triple Star Ranger | 6+ Superbadges</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio/Projects Section -->
-        <section id="projects" class="mb-16 bg-white p-8 rounded-xl shadow-lg">
-            <h2 class="text-3xl font-bold mb-8 text-indigo-700 section-heading rounded-lg">Future Portfolio Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Portfolio Projects Section -->
+        <section class="bg-white p-7 rounded-2xl shadow-xl mb-10 border border-gray-100 transform transition-transform duration-300 hover:scale-[1.005]">
+            <h2 class="text-3xl font-bold text-indigo-700 mb-6 border-b-2 border-indigo-200 pb-2">My Portfolio Showcase</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
                 <!-- Project Card 1 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
-                    <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Project+Image+1" alt="Project 1 Placeholder" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2 text-indigo-700 rounded-lg">Sales Process Optimization</h3>
-                    <p class="text-gray-600 mb-4">
-                        A project focused on re-engineering and automating key stages of a sales lifecycle within Salesforce Sales Cloud,
-                        including lead conversion, opportunity management, and quote generation, to reduce manual effort and improve sales team productivity.
+                <div class="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Post-Sales Workflow Automation for XYZ Corp</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Led the end-to-end automation of critical post-sales workflows within Salesforce Service Cloud, reducing manual effort by <strong>30%</strong> and improving response times by <strong>20%</strong>. Utilized Salesforce Flows, Process Builder, and custom Apex solutions.
                     </p>
-                    <a href="#" class="text-indigo-600 hover:underline font-medium rounded-lg">Learn More &rarr;</a>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg transition-colors duration-200">
+                        Explore Project
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
                 </div>
 
                 <!-- Project Card 2 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
-                    <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Project+Image+2" alt="Project 2 Placeholder" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2 text-indigo-700 rounded-lg">Customer Service Portal Implementation</h3>
-                    <p class="text-gray-600 mb-4">
-                        Design and implementation of a self-service customer portal using Salesforce Experience Cloud,
-                        enabling customers to log cases, find FAQs, and manage their accounts, thereby deflecting calls and improving customer satisfaction.
+                <div class="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Customer Onboarding Journey Optimization</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Redesigned and optimized the customer onboarding journey, integrating Salesforce with external tools like Gainsight. Achieved a <strong>15% increase</strong> in successful onboarding rates and enhanced cross-functional visibility.
                     </p>
-                    <a href="#" class="text-indigo-600 hover:underline font-medium rounded-lg">Learn More &rarr;</a>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg transition-colors duration-200">
+                        Explore Project
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
                 </div>
 
                 <!-- Project Card 3 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
-                    <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Project+Image+3" alt="Project 3 Placeholder" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2 text-indigo-700 rounded-lg">Automated Onboarding Workflow</h3>
-                    <p class="text-gray-600 mb-4">
-                        Development of an automated onboarding process for new customers or employees within Salesforce,
-                        leveraging Flows and custom objects to manage tasks, notifications, and data capture efficiently.
+                <div class="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Salesforce Service Cloud Implementation for Support Team</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Managed the full lifecycle implementation of Salesforce Service Cloud for a 100+ member support team, including requirements gathering, UAT, and post-launch support. Resulted in a <strong>25% improvement</strong> in agent efficiency.
                     </p>
-                    <a href="#" class="text-indigo-600 hover:underline font-medium rounded-lg">Learn More &rarr;</a>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg transition-colors duration-200">
+                        Explore Project
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
                 </div>
 
                 <!-- Project Card 4 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
-                    <img src="https://placehold.co/600x400/E0E7FF/4338CA?text=Project+Image+4" alt="Project 4 Placeholder" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-semibold mb-2 text-indigo-700 rounded-lg">Reporting & Analytics Dashboard</h3>
-                    <p class="text-gray-600 mb-4">
-                        Creation of a comprehensive set of Salesforce reports and dashboards to provide leadership with real-time insights
-                        into key performance indicators (KPIs) across sales, marketing, and service operations.
+                <div class="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">KPI Dashboard & Reporting Enhancement</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Developed and deployed a suite of Salesforce dashboards and reports for post-sales KPIs, providing real-time insights into team performance and customer health. Empowered data-driven strategic decisions.
                     </p>
-                    <a href="#" class="text-indigo-600 hover:underline font-medium rounded-lg">Learn More &rarr;</a>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg transition-colors duration-200">
+                        Explore Project
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
                 </div>
-
-                <!-- Add more project cards as needed -->
 
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="bg-white p-8 rounded-xl shadow-lg text-center">
-            <h2 class="text-3xl font-bold mb-6 text-indigo-700 section-heading rounded-lg">Get in Touch</h2>
-            <p class="text-lg text-gray-700 mb-4">
-                Have a project in mind or want to discuss Salesforce solutions? Feel free to reach out!
+        <!-- Call to Action / Contact Section -->
+        <section class="bg-gradient-to-r from-teal-600 to-blue-700 p-8 rounded-2xl shadow-2xl text-center text-white transform transition-transform duration-300 hover:scale-[1.005]">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Innovate Together?</h2>
+            <p class="text-lg md:text-xl mb-6 opacity-90 max-w-2xl mx-auto">
+                I'm always eager to connect, discuss new challenges, and explore opportunities where my expertise can drive significant value.
             </p>
-            <p class="text-xl font-semibold text-indigo-600">
-                Email: <a href="mailto:your.email@example.com" class="hover:underline rounded-lg">your.email@example.com</a>
-            </p>
-            <!-- You can add social media links or a contact form here -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:simi.x.emmanuel@gmail.com" class="bg-white text-teal-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6"></path></svg>
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/simi-emmanuel" target="_blank" class="bg-white text-blue-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8.29 18.29H5.71V9.71h2.58v8.58zM7 8.49A1.5 1.5 0 118.5 7 1.5 1.5 0 017 8.49zm13 9.8H17.42v-5.27c0-1.26-.08-2.58-1.56-2.58S14.36 10 14.36 11.23v7.06h-2.58V9.71h2.47v1.12a2.76 2.76 0 012.47-1.35c2.65 0 3.14 1.74 3.14 4.01v4.78z" clip-rule="evenodd"/></svg>
+                    Connect on LinkedIn
+                </a>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 px-4 sm:px-6 lg:px-8 mt-12 text-center rounded-t-lg">
-        <p>&copy; 2025 [Your Name]. All rights reserved. Built with ❤️ and Salesforce expertise.</p>
+    <!-- Footer Section -->
+    <footer class="text-center p-6 mt-12 text-gray-600 text-sm rounded-t-xl bg-white shadow-inner">
+        <p>&copy; 2025 Simi Emmanuel. All rights reserved.</p>
+        <p>Designed with dedication and <span class="text-red-500">&hearts;</span></p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillsTabButton = document.getElementById('skills-tab');
+            const certificationsTabButton = document.getElementById('certifications-tab');
+            const skillsContent = document.getElementById('skills-content');
+            const certificationsContent = document.getElementById('certifications-content');
+
+            function showTab(tabId) {
+                // Hide all tab contents
+                skillsContent.classList.add('hidden');
+                certificationsContent.classList.add('hidden');
+
+                // Deactivate all tab buttons
+                skillsTabButton.classList.remove('active-tab');
+                skillsTabButton.classList.remove('text-indigo-700', 'bg-indigo-50');
+                skillsTabButton.classList.add('text-gray-600');
+                skillsTabButton.classList.remove('border-b-2', 'border-indigo-700'); // Remove active border
+
+                certificationsTabButton.classList.remove('active-tab');
+                certificationsTabButton.classList.remove('text-indigo-700', 'bg-indigo-50');
+                certificationsTabButton.classList.add('text-gray-600');
+                certificationsTabButton.classList.remove('border-b-2', 'border-indigo-700'); // Remove active border
+
+
+                // Show the selected tab content and activate its button
+                if (tabId === 'skills') {
+                    skillsContent.classList.remove('hidden');
+                    skillsTabButton.classList.add('active-tab', 'text-indigo-700', 'bg-indigo-50', 'border-b-2', 'border-indigo-700');
+                    skillsTabButton.classList.remove('text-gray-600');
+                } else if (tabId === 'certifications') {
+                    certificationsContent.classList.remove('hidden');
+                    certificationsTabButton.classList.add('active-tab', 'text-indigo-700', 'bg-indigo-50', 'border-b-2', 'border-indigo-700');
+                    certificationsTabButton.classList.remove('text-gray-600');
+                }
+            }
+
+            // Event Listeners for tab buttons
+            skillsTabButton.addEventListener('click', function() {
+                showTab('skills');
+            });
+
+            certificationsTabButton.addEventListener('click', function() {
+                showTab('certifications');
+            });
+
+            // Initial active tab (Skills by default)
+            showTab('skills');
+        });
+    </script>
 
 </body>
 </html>
